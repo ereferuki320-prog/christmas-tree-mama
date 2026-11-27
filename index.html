@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merry Christmas · 给雁茹</title>
+    <!-- 粉色版：基于 nobody-r/christmas-tree（MIT/开源）改色，树身金色→粉紫；手势识别与音乐已剥离，可离线打开 -->
+    <!-- Tailwind CSS is bundled locally via @tailwindcss/vite; MediaPipe scripts load on-demand -->
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #070b18;
+        font-family: 'Noto Serif SC', 'Playfair Display', serif;
+      }
+      canvas {
+        touch-action: none;
+      }
+      .font-display {
+        font-family: 'Playfair Display', 'Noto Serif SC', serif;
+      }
+      .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,217,138,0.35); border-radius: 2px; }
+      @keyframes shimmer {
+        0%, 100% { opacity: 0.55; }
+        50% { opacity: 1; }
+      }
+      .shimmer { animation: shimmer 3s ease-in-out infinite; }
+      @keyframes snowfall-gradient {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 0% 200%; }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CZPyPNXc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BeE7YxDE.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <style>
+      #yanru { position: fixed; left: 50%; bottom: 4.2%; transform: translateX(-50%); z-index: 10;
+        pointer-events: none; text-align: center; font-family: "KaiTi","STKaiti",serif; color: #ffd9ec;
+        text-shadow: 0 0 10px rgba(255,110,190,.85), 0 0 26px rgba(220,60,160,.5); white-space: nowrap; }
+      #yanru .l1 { font-size: 17px; letter-spacing: .3em; }
+      #yanru .l2 { font-size: 12px; letter-spacing: .22em; color: rgba(255,215,238,.75); margin-top: 5px; }
+    </style>
+    <div id="yanru"><div class="l1">亲爱的雁茹 · 圣诞快乐</div><div class="l2">愿所有的美好都如期而至 —— 杨家郡</div></div>
+
+  </body>
+</html>
